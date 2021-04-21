@@ -73,23 +73,31 @@ btnLeft.addEventListener("click", () => {
     btnRight.className = "btn reset";
     btnLeft.textContent = "START";
     btnLeft.className = "btn start";
-    chronometer.splitClick();
+    chronometer.stopClick();
   }
 });
 
-// Reset/Split Button
-btnRight.addEventListener('click', () => {
-  if (btnRight.className === "btn reset"){
-    btnRight.textContent = "SPLIT";
-    btnLeft.textContent = "STOP";
-    btnRight.className = "btn split";
-    btnLeft.className = "btn stop";
-    chronometer.startClick();
-  }else {
-    btnRight.textContent = "RESET";
-    btnRight.className = "btn reset";
-    btnLeft.textContent = "START";
-    btnLeft.className = "btn start";
-    chronometer.splitClick();
-  }
-});
+// // Reset/Split Button
+// btnRight.addEventListener('click', () => {
+//   if(btnRight.className === "btn reset")
+// };
+
+
+
+
+
+
+//   if (btnRight.className === "btn reset"){
+//     btnRight.textContent = "SPLIT";
+//     btnLeft.textContent = "STOP";
+//     btnRight.className = "btn split";
+//     btnLeft.className = "btn stop";
+//     chronometer.startClick();
+//   }else {
+//     btnRight.textContent = "RESET";
+//     btnRight.className = "btn reset";
+//     btnLeft.textContent = "START";
+//     btnLeft.className = "btn start";
+//     chronometer.splitClick();
+//   }
+// });
