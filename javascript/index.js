@@ -1,3 +1,5 @@
+//import {startClick, getMinutes, getSeconds,twoDigitsNumber, stopClick, resetClick, splitClick} from"./chronometer";
+
 const chronometer = new Chronometer();
 
 // get the buttons:
