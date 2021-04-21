@@ -1,4 +1,5 @@
 //import {startClick, getMinutes, getSeconds,twoDigitsNumber, stopClick, resetClick, splitClick} from"./chronometer";
+import { Chronometer } from "./chronometer.js";
 
 const chronometer = new Chronometer();
 
@@ -15,8 +16,11 @@ let milDec = document.getElementById('milDec');
 let milUni = document.getElementById('milUni');
 let splits = document.getElementById('splits');
 
-function printTime() {
-  // ... your code goes here
+function printTime(evt) {
+  btnLeft(evt) = chronometer.getMinutes; 
+  
+  
+ 
 }
 
 function printMinutes() {
@@ -57,11 +61,35 @@ function setResetBtn() {
 }
 
 // Start/Stop Button
-btnLeft.addEventListener('click', () => {
-  // ... your code goes here
+btnLeft.addEventListener("click", () => {
+  if (btnLeft.className === "btn start") {
+    btnRight.textContent = "SPLIT";
+    btnLeft.textContent = "STOP";
+    btnRight.className = "btn split";
+    btnLeft.className = "btn stop";
+    chronometer.startClick();
+  } else {
+    btnRight.textContent = "RESET";
+    btnRight.className = "btn reset";
+    btnLeft.textContent = "START";
+    btnLeft.className = "btn start";
+    chronometer.splitClick();
+  }
 });
 
 // Reset/Split Button
 btnRight.addEventListener('click', () => {
-  // ... your code goes here
+  if (btnRight.className === "btn reset"){
+    btnRight.textContent = "SPLIT";
+    btnLeft.textContent = "STOP";
+    btnRight.className = "btn split";
+    btnLeft.className = "btn stop";
+    chronometer.startClick();
+  }else {
+    btnRight.textContent = "RESET";
+    btnRight.className = "btn reset";
+    btnLeft.textContent = "START";
+    btnLeft.className = "btn start";
+    chronometer.splitClick();
+  }
 });
